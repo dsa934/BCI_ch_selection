@@ -1,3 +1,17 @@
+
+"""
+  Restoration of papers related to the BCI channels. ( CCS-CSP )
+
+  Paper title : "Correlation-based channel selection and regularized feature optimization for MI-based BCI"
+
+  Author : Jinwoo Lee
+
+  Data : 2021/4/25
+
+"""
+
+
+
 import scipy.io as scio
 import torch
 import jw_functions
