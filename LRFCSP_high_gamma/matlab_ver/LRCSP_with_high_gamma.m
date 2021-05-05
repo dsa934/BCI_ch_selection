@@ -10,8 +10,8 @@ by jinwoo Lee
 
 %% load data
 clear all
-load('data_1000Hz\data_set_IVa_al');
-load('data_1000Hz\true_labels_al');
+load('data_set_IVa_al');
+load('true_labels_al');
 
 %% init ( ref BCI Competition III-IVa )
 cnt= 0.1*double(cnt);
@@ -81,21 +81,25 @@ for node=1:18
         mu_beta_rh(k,:)=filtfilt(bbb,aaa,sel_rh_eeg(node,:,k));
         high_gamma_rh(k,:)=filtfilt(ddd,ccc,sel_rh_eeg(node,:,k));
     end
-    bp_rh(:,:,node)=mu_beta_rh(:,501:3000) + high_gamma_rh(:,501:3000);
+    bp_rh(:,node,:)=mu_beta_rh(:,501:3000) + high_gamma_rh(:,501:3000);
     
     for k=1:r
         mu_beta_rf(k,:)=filtfilt(bbb,aaa,sel_rf_eeg(node,:,k));
         high_gamma_rf(k,:)=filtfilt(ddd,ccc,sel_rf_eeg(node,:,k));
     end
-    bp_rf(:,:,node)=mu_beta_rf(:,501:3000) + high_gamma_rf(:,501:3000);
+    bp_rf(:,node,:)=mu_beta_rf(:,501:3000) + high_gamma_rf(:,501:3000);
     
     for k=1:tr
         mu_beta_test(k,:)=filtfilt(bbb,aaa,sel_test_eeg(node,:,k));
         high_gamma_test(k,:)=filtfilt(ddd,ccc,sel_test_eeg(node,:,k));
     end
-    bp_test(:,:,node)=mu_beta_test(:,501:3000) + high_gamma_test(:,501:3000);
+    bp_test(:,node,:)=mu_beta_test(:,501:3000) + high_gamma_test(:,501:3000);
     
 end
+
+save("bp_test.mat", 'bp_test')
+save("bp_rh.mat", 'bp_rh')
+save("bp_rf.mat", 'bp_rf')
 
 
 

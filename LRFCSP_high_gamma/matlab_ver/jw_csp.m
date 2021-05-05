@@ -5,7 +5,6 @@ rma=mean(co22,3);
 R=(rm+rma);
 [U,Lambda] = eig(R);
 
-
 P=sqrt(inv((Lambda)))*U';
 S{1}=P*rm*P';
 S{2}=P*rma*P';
@@ -15,8 +14,14 @@ qq=P*rma*P';
 check=(q+qq);
 
 [C,CC]=eig(q);
+
 mk=max(diag(CC));
 mmk=min(diag(CC));
+disp("======")
+disp(mk)
+disp(mmk)
+disp("differ")
+disp(mk-mmk)
 
 [Ca,CCa]=eig(qq);
 nw=P'*C;
