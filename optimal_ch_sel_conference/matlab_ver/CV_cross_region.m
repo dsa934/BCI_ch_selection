@@ -3,10 +3,10 @@ clear all
 
 % train_shape = [ 252, 118, 501]
 % test_shape = [28, 118, 501]
-load('C:\Users\dsa93\Desktop\compare_paper_other_algorithm\park_optimal_channelsel_conference\data_100Hz\ay\train\train_10');
-load('C:\Users\dsa93\Desktop\compare_paper_other_algorithm\park_optimal_channelsel_conference\data_100Hz\ay\train\train_label_10');
-load('C:\Users\dsa93\Desktop\compare_paper_other_algorithm\park_optimal_channelsel_conference\data_100Hz\ay\test\test_10');
-load('C:\Users\dsa93\Desktop\compare_paper_other_algorithm\park_optimal_channelsel_conference\data_100Hz\ay\test\test_label_10');
+load('C:\Users\dsa93\Desktop\compare_paper_other_algorithm\park_optimal_channelsel_conference\BCI_com_iii_Iva\data_100Hz\al\train\train_1');
+load('C:\Users\dsa93\Desktop\compare_paper_other_algorithm\park_optimal_channelsel_conference\BCI_com_iii_Iva\data_100Hz\al\train\train_label_1');
+load('C:\Users\dsa93\Desktop\compare_paper_other_algorithm\park_optimal_channelsel_conference\BCI_com_iii_Iva\data_100Hz\al\test\test_1');
+load('C:\Users\dsa93\Desktop\compare_paper_other_algorithm\park_optimal_channelsel_conference\BCI_com_iii_Iva\data_100Hz\al\test\test_label_1');
 
 % set num_of subregion
 num_sub_region = 8;
@@ -135,8 +135,8 @@ for ch_idx =1:118
 end
 
 % seperate train -> left/rightg
-fb1_RH_bp_train = bp_train(1:num_train/2,:,:);
-fb1_RF_bp_train = bp_train( (num_train/2)+1:end,:,:);
+fb1_RH_bp_train = fb1_bp_train(1:num_train/2,:,:);
+fb1_RF_bp_train = fb1_bp_train( (num_train/2)+1:end,:,:);
 
 
 % cross combin channels
@@ -225,8 +225,8 @@ for ch_idx =1:118
 end
 
 % seperate train -> left/rightg
-fb2_RH_bp_train = bp_train(1:num_train/2,:,:);
-fb2_RF_bp_train = bp_train( (num_train/2)+1:end,:,:);
+fb2_RH_bp_train = fb2_bp_train(1:num_train/2,:,:);
+fb2_RF_bp_train = fb2_bp_train( (num_train/2)+1:end,:,:);
 
 
 % cross combin channels
@@ -315,8 +315,8 @@ for ch_idx =1:118
 end
 
 % seperate train -> left/rightg
-fb3_RH_bp_train = bp_train(1:num_train/2,:,:);
-fb3_RF_bp_train = bp_train( (num_train/2)+1:end,:,:);
+fb3_RH_bp_train = fb3_bp_train(1:num_train/2,:,:);
+fb3_RF_bp_train = fb3_bp_train( (num_train/2)+1:end,:,:);
 
 
 % cross combin channels
@@ -405,8 +405,8 @@ for ch_idx =1:118
 end
 
 % seperate train -> left/rightg
-fb4_RH_bp_train = bp_train(1:num_train/2,:,:);
-fb4_RF_bp_train = bp_train( (num_train/2)+1:end,:,:);
+fb4_RH_bp_train = fb4_bp_train(1:num_train/2,:,:);
+fb4_RF_bp_train = fb4_bp_train( (num_train/2)+1:end,:,:);
 
 
 % cross combin channels
@@ -496,8 +496,8 @@ for ch_idx =1:118
 end
 
 % seperate train -> left/rightg
-fb5_RH_bp_train = bp_train(1:num_train/2,:,:);
-fb5_RF_bp_train = bp_train( (num_train/2)+1:end,:,:);
+fb5_RH_bp_train = fb5_bp_train(1:num_train/2,:,:);
+fb5_RF_bp_train = fb5_bp_train( (num_train/2)+1:end,:,:);
 
 
 % cross combin channels
@@ -586,8 +586,8 @@ for ch_idx =1:118
 end
 
 % seperate train -> left/rightg
-fb6_RH_bp_train = bp_train(1:num_train/2,:,:);
-fb6_RF_bp_train = bp_train( (num_train/2)+1:end,:,:);
+fb6_RH_bp_train = fb6_bp_train(1:num_train/2,:,:);
+fb6_RF_bp_train = fb6_bp_train( (num_train/2)+1:end,:,:);
 
 
 % cross combin channels
@@ -677,8 +677,8 @@ for ch_idx =1:118
 end
 
 % seperate train -> left/rightg
-fb7_RH_bp_train = bp_train(1:num_train/2,:,:);
-fb7_RF_bp_train = bp_train( (num_train/2)+1:end,:,:);
+fb7_RH_bp_train = fb7_bp_train(1:num_train/2,:,:);
+fb7_RF_bp_train = fb7_bp_train( (num_train/2)+1:end,:,:);
 
 
 % cross combin channels
