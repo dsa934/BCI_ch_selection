@@ -48,7 +48,6 @@ mean_RH = squeeze(mean(RH_cov, 1));
 mean_RF = squeeze(mean(RF_cov, 1));
 
 % calculate channel score matirx V
-% 여기시발 논문이 +로 써있어서 3일해맴 시발년아 -임 difference라서
 V = abs( mean_RH - mean_RF) ;
 
 % 자기자신과의 조합은 제외 
