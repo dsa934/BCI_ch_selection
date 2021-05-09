@@ -12,10 +12,10 @@ import jw_functions as jwf
 import numpy as np
 
 # load data
-train_data = scio.loadmat("C:/Users/dsa93/Desktop/compare_paper_other_algorithm/park_optimal_cs_journal/data100Hz/ay/train/train_10")
-train_label = scio.loadmat("C:/Users/dsa93/Desktop/compare_paper_other_algorithm/park_optimal_cs_journal/data100Hz/ay/train/train_label_10")
-test_data = scio.loadmat("C:/Users/dsa93/Desktop/compare_paper_other_algorithm/park_optimal_cs_journal/data100Hz/ay/test/test_10")
-test_label = scio.loadmat("C:/Users/dsa93/Desktop/compare_paper_other_algorithm/park_optimal_cs_journal/data100Hz/ay/test/test_label_10")
+train_data = scio.loadmat("C:/Users/dsa93/Desktop/compare_paper_other_algorithm/park_optimal_cs_journal/data100Hz/ay/train/train_2")
+train_label = scio.loadmat("C:/Users/dsa93/Desktop/compare_paper_other_algorithm/park_optimal_cs_journal/data100Hz/ay/train/train_label_2")
+test_data = scio.loadmat("C:/Users/dsa93/Desktop/compare_paper_other_algorithm/park_optimal_cs_journal/data100Hz/ay/test/test_2")
+test_label = scio.loadmat("C:/Users/dsa93/Desktop/compare_paper_other_algorithm/park_optimal_cs_journal/data100Hz/ay/test/test_label_2")
 
 # data shape = [252,118,501], [28,118,50]
 train_data = train_data['train_data']
@@ -48,10 +48,10 @@ from sklearn.svm import SVC
 
 svm_model = SVC(kernel='rbf', C=1, gamma=10)
 svm_model.fit(train_data_set,train_label[0])
-y_pred = svm_model.predict(test_data_set)
 
 tmp = np.random.permutation(28)
 test_data_set = test_data_set[tmp,:]
+y_pred = svm_model.predict(test_data_set)
 
 for ran_idx in range(len(tmp)):
 
