@@ -43,8 +43,8 @@
  
  ## Concept
  
- ![concept](https://user-images.githubusercontent.com/83410590/127599080-00a079a9-141d-483c-9fd9-4dc2e1895224.PNG)
- 
+ ![concept2](https://user-images.githubusercontent.com/83410590/127611291-01d5a58f-12c9-47ee-8be8-fc14ee4eea85.PNG)
+
   - In order to convert RAW EEG data, which is sequential data, into image data, it is converted into a spectrogram through STFT.
   - By applying LRP to the CNN model that has learned the spectrogram, the contribution of each channel can be calculated.
  
