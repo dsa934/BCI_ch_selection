@@ -39,6 +39,7 @@
  - LRP calculates a relevance score for each pixel of the input data.
  - The trained model outputs a predicted value f(x) for a given x.
  - LRP represents the reason why the trained model predicted f(x) by expressing the input value x as a heat map. 
+ - LRP ref codes : https://github.com/moboehle/Pytorch-LRP
 
  
  ## Concept
